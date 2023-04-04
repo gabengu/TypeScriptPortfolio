@@ -40,19 +40,19 @@ export default function Landing(){
                         </div>
                     </div>
                     <div className="flex flex-row sm:flex-col lg:flex-row gap-5 sm:gap-2 lg:gap-5 text-base sm:text-xl items-start">
-                        <div className="group cursor-pointer" onClick={() => {Scroll("about")}}>
+                        <div className="group cursor-pointer font-medium" onClick={() => {Scroll("about")}}>
                             About
                             <div className="max-w-0 group-hover:max-w-full transition-all duration-150 bg-black h-0.5"></div>
                         </div>
-                        <div className="group cursor-pointer" onClick={() => {Scroll("experience")}}>
+                        <div className="group cursor-pointer font-medium" onClick={() => {Scroll("experience")}}>
                             Experience
                             <div className="max-w-0 group-hover:max-w-full transition-all duration-150 bg-black h-0.5"></div>
                         </div>
-                        <div className="group cursor-pointer" onClick={() => {Scroll("skills")}}>
+                        <div className="group cursor-pointer font-medium" onClick={() => {Scroll("skills")}}>
                             Skills
                             <div className="max-w-0 group-hover:max-w-full transition-all duration-150 bg-black h-0.5"></div>
                         </div>
-                        <div className="group cursor-pointer" onClick={() => {Scroll("projects")}}>
+                        <div className="group cursor-pointer font-medium" onClick={() => {Scroll("projects")}}>
                             Projects
                             <div className="max-w-0 group-hover:max-w-full transition-all duration-150 bg-black h-0.5"></div>
                         </div>
