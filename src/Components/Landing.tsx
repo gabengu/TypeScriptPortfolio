@@ -44,15 +44,15 @@ export default function Landing(){
                             About
                             <div className="max-w-0 group-hover:max-w-full transition-all duration-150 bg-black h-0.5"></div>
                         </div>
-                        <div className="group cursor-pointer">
+                        <div className="group cursor-pointer" onClick={() => {Scroll("experience")}}>
                             Experience
                             <div className="max-w-0 group-hover:max-w-full transition-all duration-150 bg-black h-0.5"></div>
                         </div>
-                        <div className="group cursor-pointer">
+                        <div className="group cursor-pointer" onClick={() => {Scroll("skills")}}>
                             Skills
                             <div className="max-w-0 group-hover:max-w-full transition-all duration-150 bg-black h-0.5"></div>
                         </div>
-                        <div className="group cursor-pointer">
+                        <div className="group cursor-pointer" onClick={() => {Scroll("projects")}}>
                             Projects
                             <div className="max-w-0 group-hover:max-w-full transition-all duration-150 bg-black h-0.5"></div>
                         </div>

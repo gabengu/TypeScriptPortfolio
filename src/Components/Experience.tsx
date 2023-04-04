@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import IBM from "/IBM_logo.svg"
 import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
+import IBM from "/IBM_logo.svg"
 
-export default function Experience() {
+export default function Experience(){
     function useParallax(value: MotionValue<number>, distance: number) {
         return useTransform(value, [0, 1], [-distance, distance]);
     }
@@ -29,14 +29,14 @@ export default function Experience() {
                     transition={{duration:1.0}}
                 >
                     <div className="flex">
-                        <div className="flex pr-10 border-r-2 border-white h-60 items-center">
-                            <img src={IBM} className="h-1/2"/>
+                        <div className="flex pr-10 border-r-2 border-white h-44 items-center">
+                            <img src={IBM} className="h-2/3"/>
                         </div>
-                        <div className="flex flex-col pl-5 h-60 justify-center">
-                            <h1 className="text-3xl font-bold">Developer Intern</h1>
+                        <div className="flex flex-col pl-5 h-44 justify-center">
+                            <h1 className="text-3xl font-bold">IBM</h1>
                             <ul className="text-xl list-disc ml-5">
+                                <li>Developer Intern</li>
                                 <li>16 Months (May 2023 - August 2024)</li>
-                                <li>Java, JavaScript</li>
                                 <li>Markham, ON</li>
                             </ul>
                         </div>

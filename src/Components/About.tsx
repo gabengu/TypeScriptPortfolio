@@ -1,6 +1,6 @@
+import { useEffect, useRef, useState } from "react"
 import { MotionValue, motion, useScroll, useTransform } from "framer-motion"
 import SaltBae from "/SaltBae.jpg"
-import { useEffect, useRef, useState } from "react"
 
 export default function About(){
     function useParallax(value: MotionValue<number>, distance: number) {
