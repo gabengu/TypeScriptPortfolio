@@ -22,7 +22,7 @@ export default function Landing(){
             <div className="flex flex-col h-1/2 sm:h-full w-full justify-center items-center sm:items-start">
                 <div className="flex flex-col items-center sm:items-start gap-10 ">
                     <h1 className="text-4xl sm:text-7xl font-bold">
-                        Hi 👋! I'm Gabe.
+                        Hi👋! I'm Gabe.
                     </h1>
                     <div className=" w-full text-2xl sm:text-4xl">
                         <h1 className="font-bold">
