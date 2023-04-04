@@ -18,12 +18,12 @@ export default function Experience(){
     },[])
     const Ref = useRef(null)
     const { scrollYProgress } = useScroll({ target: Ref });
-    const y = windowSize <= 640 ? useParallax(scrollYProgress, 0) : useParallax(scrollYProgress, 200)
+    const y = windowSize <= 640 ? useParallax(scrollYProgress, 0) : useParallax(scrollYProgress, 300)
     return(
-        <div id="experience" className="flex h-screen w-full bg-[#252627] justify-center items-center snap-center">
-            <div className="flex flex-col-reverse sm:flex-row w-[90%] h-[90%] sm:h-full justify-center gap-5 items-center text-white pl-5">
+        <div id="experience" className="flex h-screen bg-[#252627] justify-center items-center snap-center">
+            <div className="flex flex-col-reverse sm:flex-row w-[90%] sm:h-full justify-center sm:justify-between gap-5 items-center text-white pl-5">
                 <motion.div
-                    className="flex flex-col items-center gap-10"
+                    className="flex flex-col items-center justify-center gap-10 grow"
                     initial={{opacity:0}}
                     whileInView={{opacity:1}}
                     transition={{duration:1.0}}

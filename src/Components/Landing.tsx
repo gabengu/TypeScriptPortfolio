@@ -19,8 +19,8 @@ export default function Landing(){
             <div className="flex h-1/2 w-full sm:h-full justify-center items-center">       
                 <img src={Portrait} className="w-[50%] sm:w-[65%] lg:w-[50%] aspect-square border-8 border-black"/>        
             </div>
-            <div className="flex flex-col h-1/2 sm:h-full w-full justify-center items-center sm:items-end">
-                <div className="flex flex-col items-center sm:items-start gap-10 sm:mr-20">
+            <div className="flex flex-col h-1/2 sm:h-full w-full justify-center items-center sm:items-start">
+                <div className="flex flex-col items-center sm:items-start gap-10 ">
                     <h1 className="text-4xl sm:text-7xl font-bold">
                         Hi 👋! I'm Gabe.
                     </h1>
