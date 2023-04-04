@@ -21,7 +21,7 @@ export default function Experience(){
     const y = windowSize <= 640 ? useParallax(scrollYProgress, 0) : useParallax(scrollYProgress, 300)
     return(
         <div id="experience" className="flex h-screen bg-[#252627] justify-center items-center snap-center">
-            <div className="flex flex-col-reverse sm:flex-row w-[90%] sm:h-full justify-center sm:justify-between gap-5 items-center text-white pl-5">
+            <div className="flex flex-col-reverse sm:flex-row w-[90%] h-[90%] sm:h-full justify-center sm:justify-between gap-5 items-center text-white pl-5">
                 <motion.div
                     className="flex flex-col items-center justify-center gap-10 grow"
                     initial={{opacity:0}}
@@ -41,8 +41,8 @@ export default function Experience(){
                             </ul>
                         </div>
                     </div>
-                    <div className="text-5xl">
-                        More Coming Soon!
+                    <div className="text-4xl">
+                        Always looking for new opportunities!
                     </div>
                 </motion.div>
                 <motion.h1

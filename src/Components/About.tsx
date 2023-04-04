@@ -21,7 +21,7 @@ export default function About(){
     const y = windowSize <= 640 ? useParallax(scrollYProgress, 0) : useParallax(scrollYProgress, 300)
     return(
         <div id="about" className="flex h-screen bg-[#252627] justify-center items-center snap-center">
-            <div className="flex flex-col sm:flex-row w-[90%] h-full justify-between gap-5 items-center text-white">
+            <div className="flex flex-col sm:flex-row w-[90%] h-[90%] justify-between gap-5 items-center text-white">
                 <motion.h1
                     ref={Ref}
                     className="underline text-5xl lg:text-7xl font-bold"
