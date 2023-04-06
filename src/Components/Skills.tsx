@@ -15,9 +15,10 @@ import React from "/icons8-react-native-480.png"
 import Tailwind from "/icons8-tailwindcss-480.png"
 import FastAPI from "/fastapi-seeklogo.com.svg"
 import Mongo from "/icons8-mongodb-480.png"
+import TypeScript from "/icons8-typescript-480.png"
 
 export default function Skills(){
-    const images = [C, Cpp, Python, Java, JS, HTML, CSS, React, Node, Express, FastAPI, Tailwind, MySQL, PostgreSQL, Mongo]
+    const images = [C, Cpp, Python, Java, JS, TypeScript, HTML, CSS, React, Node, Express, FastAPI, Tailwind, MySQL, PostgreSQL, Mongo]
     function useParallax(value: MotionValue<number>, distance: number) {
         return useTransform(value, [0, 1], [-distance, distance]);
     }
@@ -53,7 +54,7 @@ export default function Skills(){
                     <div className="flex h-full flex-wrap gap-x-5 justify-center items-center w-[80%]">
                         {images.map(image => {
                             return(
-                                <div className="flex justify-center items-center rounded-full bg-white w-1/4 sm:w-1/5 md:w-1/6 h-auto aspect-square">
+                                <div className="flex justify-center items-center rounded-full bg-white w-1/4 sm:w-1/5 md:w-[15%] h-auto aspect-square">
                                     <img src={image} className="w-4/5 h-auto"/>
                                 </div>
                             )

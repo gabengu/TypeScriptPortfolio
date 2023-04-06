@@ -9,7 +9,7 @@ export default function Landing(){
             window.scrollTo({top: y, behavior: "smooth"});
         }
     }
-    const list: string[]=['3rd year SWE @ UCalgary','Passionate Learner']
+    const list: string[]=['A 3rd year SWE @ UCalgary.','A Passionate Learner.', 'Always open to connect!']
     return(
         <div className="flex flex-col sm:flex-row h-screen justify-center items-end snap-center">
             <div className="absolute flex flex-col sm:flex-row top-0 left-0 w-full max-w-full h-screen -z-10">
@@ -21,14 +21,14 @@ export default function Landing(){
             </div>
             <div className="flex flex-col h-1/2 sm:h-full w-full justify-center items-center sm:items-start">
                 <div className="flex flex-col items-center sm:items-start gap-10 ">
-                    <h1 className="text-4xl sm:text-7xl font-bold">
+                    <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold">
                         Hi👋! I'm Gabe.
                     </h1>
-                    <div className=" w-full text-2xl sm:text-4xl">
+                    <div className=" w-full text-2xl sm:text-3xl lg:text-4xl">
                         <h1 className="font-bold">
-                            I'm a...
+                            I'm...
                         </h1>
-                        <div className="text-2xl sm:text-4xl">                           
+                        <div className="text-2xl sm:text-3xl lg:text-4xl">                           
                             <TypewriterComponent 
                                 options={{
                                     strings: list,
