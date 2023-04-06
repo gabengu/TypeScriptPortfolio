@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
 import C  from "/icons8-c-programming-480.png"
 import Cpp from "/icons8-c++-480.png"
@@ -50,7 +50,7 @@ export default function Skills(){
                     whileInView={{opacity:1}}
                     transition={{duration:1.0}}
                 >
-                    <div className="flex h-full flex-wrap gap-5 justify-center items-center w-[80%]">
+                    <div className="flex h-full flex-wrap gap-x-5 justify-center items-center w-[80%]">
                         {images.map(image => {
                             return(
                                 <div className="flex justify-center items-center rounded-full bg-white w-1/4 sm:w-1/5 md:w-1/6 h-auto aspect-square">
