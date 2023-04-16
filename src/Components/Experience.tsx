@@ -41,7 +41,7 @@ export default function Experience(){
                             </ul>
                         </div>
                     </div>
-                    <div className="text-4xl">
+                    <div className="text-4xl text-center">
                         Always looking for new opportunities!
                     </div>
                 </motion.div>

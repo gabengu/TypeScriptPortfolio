@@ -20,7 +20,7 @@ export default function Projects() {
     const y = windowSize <= 640 ? useParallax(scrollYProgress, 0) : useParallax(scrollYProgress, 300)
     return(
         <div id="projects" className="flex h-screen bg-[#252627] justify-center items-center snap-center">
-            <div className="flex flex-col sm:flex-row w-[90%] h-[90%] justify-between gap-5 items-center text-white">
+            <div className="flex flex-col-reverse sm:flex-row w-[90%] h-[90%] justify-between gap-5 items-center text-white">
                 <motion.div
                     className="flex grow justify-center items-center h-[80%]"
                     initial={{opacity:0}}

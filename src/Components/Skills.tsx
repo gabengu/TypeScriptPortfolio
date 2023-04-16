@@ -51,10 +51,10 @@ export default function Skills(){
                     whileInView={{opacity:1}}
                     transition={{duration:1.0}}
                 >
-                    <div className="flex h-full flex-wrap gap-x-5 justify-center items-center w-[80%]">
+                    <div className="flex h-full overflow-hidden flex-wrap gap-5 justify-center items-center w-[80%]">
                         {images.map(image => {
                             return(
-                                <div className="flex justify-center items-center rounded-full bg-white w-1/4 sm:w-1/5 md:w-[15%] h-auto aspect-square">
+                                <div className="flex justify-center items-center rounded-full bg-white w-1/5 md:w-[15%] h-auto aspect-square">
                                     <img src={image} className="w-4/5 h-auto"/>
                                 </div>
                             )
