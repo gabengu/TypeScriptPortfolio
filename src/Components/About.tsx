@@ -1,21 +1,15 @@
-import { useEffect, useRef, useState } from "react"
+import { useRef } from "react"
 import { MotionValue, motion, useScroll, useTransform } from "framer-motion"
 import SaltBae from "/SaltBae.jpg"
 
-export default function About(){
+interface props{
+    windowSize: number
+}
+
+export default function About({windowSize}:props){
     function useParallax(value: MotionValue<number>, distance: number) {
         return useTransform(value, [0, 1], [-distance, distance]);
     }
-    const [windowSize, setWindowSize] = useState(window.innerWidth)
-    useEffect(()=>{
-        function watchWindow(){
-            setWindowSize(window.innerWidth)
-        }
-        window.addEventListener("resize", watchWindow)
-        return function(){
-            window.removeEventListener("resize", watchWindow)
-        }
-    },[])
     const Ref = useRef(null)
     const { scrollYProgress } = useScroll({ target: Ref });
     const y = windowSize <= 640 ? useParallax(scrollYProgress, 0) : useParallax(scrollYProgress, 300)

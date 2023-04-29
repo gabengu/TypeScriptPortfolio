@@ -1,21 +1,15 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
 import IBM from "/IBM_logo.svg"
 
-export default function Experience(){
+interface props{
+    windowSize: number
+}
+
+export default function Experience({windowSize}:props){
     function useParallax(value: MotionValue<number>, distance: number) {
         return useTransform(value, [0, 1], [-distance, distance]);
     }
-    const [windowSize, setWindowSize] = useState(window.innerWidth)
-    useEffect(()=>{
-        function watchWindow(){
-            setWindowSize(window.innerWidth)
-        }
-        window.addEventListener("resize", watchWindow)
-        return function(){
-            window.removeEventListener("resize", watchWindow)
-        }
-    },[])
     const Ref = useRef(null)
     const { scrollYProgress } = useScroll({ target: Ref });
     const y = windowSize <= 640 ? useParallax(scrollYProgress, 0) : useParallax(scrollYProgress, 300)
@@ -33,21 +27,21 @@ export default function Experience(){
                             <img src={IBM} className="h-2/3"/>
                         </div>
                         <div className="flex flex-col pl-5 h-44 justify-center">
-                            <h1 className="text-3xl font-bold">IBM</h1>
-                            <ul className="text-xl list-disc ml-5">
+                            <h1 className="text-2xl lg:text-3xl font-bold">IBM</h1>
+                            <ul className="text-lg lg:text-xl list-disc ml-5">
                                 <li>Developer Intern</li>
                                 <li>16 Months (May 2023 - August 2024)</li>
                                 <li>Markham, ON</li>
                             </ul>
                         </div>
                     </div>
-                    <div className="text-4xl text-center">
+                    <div className="text-3xl lg:text-4xl text-center">
                         Always looking for new opportunities!
                     </div>
                 </motion.div>
                 <motion.h1
                     ref={Ref}
-                    className="underline text-5xl lg:text-7xl font-bold"
+                    className="underline text-4xl md:text-5xl lg:text-7xl font-bold"
                     style={{y}}
                 >
                     Experience

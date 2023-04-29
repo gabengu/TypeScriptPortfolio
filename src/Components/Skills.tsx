@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef} from "react";
 import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
 import C  from "/icons8-c-programming-480.png"
 import Cpp from "/icons8-c++-480.png"
@@ -17,21 +17,15 @@ import FastAPI from "/fastapi-seeklogo.com.svg"
 import Mongo from "/icons8-mongodb-480.png"
 import TypeScript from "/icons8-typescript-480.png"
 
-export default function Skills(){
+interface props{
+    windowSize: number
+}
+
+export default function Skills({windowSize}:props){
     const images = [C, Cpp, Python, Java, JS, TypeScript, HTML, CSS, React, Node, Express, FastAPI, Tailwind, MySQL, PostgreSQL, Mongo]
     function useParallax(value: MotionValue<number>, distance: number) {
         return useTransform(value, [0, 1], [-distance, distance]);
     }
-    const [windowSize, setWindowSize] = useState(window.innerWidth)
-    useEffect(()=>{
-        function watchWindow(){
-            setWindowSize(window.innerWidth)
-        }
-        window.addEventListener("resize", watchWindow)
-        return function(){
-            window.removeEventListener("resize", watchWindow)
-        }
-    },[])
     const Ref = useRef(null)
     const { scrollYProgress } = useScroll({ target: Ref });
     const y = windowSize <= 640 ? useParallax(scrollYProgress, 0) : useParallax(scrollYProgress, 300)
@@ -54,7 +48,7 @@ export default function Skills(){
                     <div className="flex h-full overflow-hidden flex-wrap gap-5 justify-center items-center w-[80%]">
                         {images.map(image => {
                             return(
-                                <div className="flex justify-center items-center rounded-full bg-white w-1/5 md:w-[15%] h-auto aspect-square">
+                                <div className="flex justify-center items-center rounded-full bg-white w-1/5 lg:w-[15%] h-auto aspect-square">
                                     <img src={image} className="w-4/5 h-auto"/>
                                 </div>
                             )
