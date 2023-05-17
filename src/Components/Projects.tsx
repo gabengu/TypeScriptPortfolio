@@ -3,6 +3,7 @@ import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import ProjectCard from "./ProjectCard";
 
 interface props{
     windowSize: number
@@ -32,7 +33,8 @@ export default function Projects({windowSize}:props) {
                     transition={{duration:1.0}}
                 >
                     <Slider {...settings} className="w-full">
-                        
+                        <ProjectCard />
+                        <ProjectCard />
                     </Slider>
                 </motion.div>
                 <motion.h1
