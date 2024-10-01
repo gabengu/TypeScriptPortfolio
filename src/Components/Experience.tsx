@@ -29,7 +29,7 @@ export default function Experience({windowSize}:props){
                         <div className="flex flex-col pl-5 h-44 justify-center">
                             <h1 className="text-2xl lg:text-3xl font-bold">IBM</h1>
                             <ul className="text-lg lg:text-xl list-disc ml-5">
-                                <li>Developer Intern</li>
+                                <li>Software Engineer Intern</li>
                                 <li>16 Months (May 2023 - August 2024)</li>
                                 <li>Markham, ON</li>
                             </ul>

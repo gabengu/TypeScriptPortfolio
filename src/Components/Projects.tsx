@@ -4,10 +4,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import ProjectCard from "./ProjectCard";
+import MFR from "/MFR.png"
 
 interface props{
     windowSize: number
 }
+
+const MFRdesc:string = `A full-stack social media web application designed to allow users to easily share their own outfits and find inspiration from others. 
+Built using NextJS and React for the front-end, NodeJS and Express build the backend and REST APIs that query from the Mongo database.`
 
 export default function Projects({windowSize}:props) {
     function useParallax(value: MotionValue<number>, distance: number) {
@@ -17,7 +21,7 @@ export default function Projects({windowSize}:props) {
     const { scrollYProgress } = useScroll({ target: Ref });
     const y = windowSize <= 640 ? useParallax(scrollYProgress, 0) : useParallax(scrollYProgress, 300)
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
@@ -33,8 +37,9 @@ export default function Projects({windowSize}:props) {
                     transition={{duration:1.0}}
                 >
                     <Slider {...settings} className="w-full">
-                        <ProjectCard />
-                        <ProjectCard />
+                        <ProjectCard img={MFR} title="MyFashionRack" desc={MFRdesc}/>
+                        <ProjectCard img={MFR} title="MyFashionRack" desc={MFRdesc}/>
+                        <ProjectCard img={MFR} title="MyFashionRack" desc={MFRdesc}/>
                     </Slider>
                 </motion.div>
                 <motion.h1
